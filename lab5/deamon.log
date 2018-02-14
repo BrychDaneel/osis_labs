@@ -1,0 +1,125 @@
+2018/02/12 01:45:19	Set new default file mask
+2018/02/12 01:45:19	Deatach from session
+2018/02/12 01:45:19	Reset PWS
+2018/02/12 01:45:19	Close IO descriptors
+2018/02/12 01:45:19	Start track to file
+2018/02/12 01:45:19	Create track thread
+2018/02/12 01:45:19	Start track thread
+2018/02/12 01:45:19	Start signal control
+2018/02/12 01:45:19	Init inotify
+2018/02/12 01:45:19	Add file to track
+2018/02/12 01:45:19	Watching:: /home/daneel/prog/osis/lab5/ss.txt
+2018/02/12 01:45:19	Set inotify O_NONBLOCK
+2018/02/12 01:45:19	Start track to file
+2018/02/12 01:45:21	Read configuration
+2018/02/12 01:45:21	Set signals
+2018/02/12 01:45:21	Start signal listen
+2018/02/12 01:45:28	Free configuration
+2018/02/12 01:45:28	Stop track thread
+2018/02/12 01:45:28	Stop watch to file
+2018/02/12 01:45:28	Exit from track thread
+2018/02/12 01:45:28	Sucsessfuly stop track thread
+2018/02/12 01:45:28	Exit from deamon
+2018/02/12 01:45:31    Set new default file mask
+2018/02/12 01:45:31    Deatach from session
+2018/02/12 01:45:31    Reset PWS
+2018/02/12 01:45:31    Close IO descriptors
+2018/02/12 01:45:31    Start track to file
+2018/02/12 01:45:31    Create track thread
+2018/02/12 01:45:31    Start track thread
+2018/02/12 01:45:31    Start signal control
+2018/02/12 01:45:31    Init inotify
+2018/02/12 01:45:31    Add file to track
+2018/02/12 01:45:31    Watching:: /home/daneel/prog/osis/lab5/ss.txt
+2018/02/12 01:45:31    Set inotify O_NONBLOCK
+2018/02/12 01:45:31    Start track to file
+2018/02/12 01:45:33    Read configuration
+2018/02/12 01:45:33    Set signals
+2018/02/12 01:45:33    Start signal listen
+2018/02/12 01:45:45    GET SIGNAL 10 (USER1_SIGNAL)
+2018/02/12 01:45:53    GET SIGNAL 10 (USER1_SIGNAL)
+2018/02/12 01:46:10    FILE WAS OPEND
+2018/02/12 01:46:10    FILE WAS CLOSED
+2018/02/12 01:46:10    FILE WAS OPEND
+2018/02/12 01:46:10    FILE WAS CLOSED
+2018/02/12 01:46:10    FILE WAS OPEND
+2018/02/12 01:46:10    FILE WAS CLOSED
+2018/02/12 01:46:10    FILE WAS OPEND
+2018/02/12 01:46:10    SOMEBODY ACCESS TO FILE
+2018/02/12 01:46:10    FILE WAS CLOSED
+2018/02/12 01:46:10    FILE WAS OPEND
+2018/02/12 01:46:10    FILE WAS CLOSED
+2018/02/12 01:46:26    FILE WAS OPEND
+2018/02/12 01:46:26    FILE WAS CLOSED
+2018/02/12 01:46:36    FILE WAS OPEND
+2018/02/12 01:46:36    FILE WAS CLOSED
+2018/02/12 01:46:36    FILE WAS OPEND
+2018/02/12 01:46:36    FILE WAS CLOSED
+2018/02/12 01:46:36    FILE WAS OPEND
+2018/02/12 01:46:36    FILE WAS CLOSED
+2018/02/12 01:46:36    FILE WAS OPEND
+2018/02/12 01:46:36    SOMEBODY ACCESS TO FILE
+2018/02/12 01:46:36    FILE WAS CLOSED
+2018/02/12 01:46:36    FILE WAS OPEND
+2018/02/12 01:46:36    FILE WAS CLOSED
+2018/02/12 01:46:56    Update configuration
+2018/02/12 01:46:56    Update signals
+2018/02/12 01:47:03    Free configuration
+2018/02/12 01:47:03    Stop track thread
+2018/02/12 01:47:03    Stop watch to file
+2018/02/12 01:47:03    Exit from track thread
+2018/02/12 01:47:03    Sucsessfuly stop track thread
+2018/02/12 01:47:03    Exit from deamon
+2018/02/13 13:50:17    Set new default file mask
+2018/02/13 13:50:17    Deatach from session
+2018/02/13 13:50:17    Reset PWS
+2018/02/13 13:50:17    Close IO descriptors
+2018/02/13 13:50:17    Start track to file
+2018/02/13 13:50:17    Create track thread
+2018/02/13 13:50:17    Start track thread
+2018/02/13 13:50:17    Start signal control
+2018/02/13 13:50:17    Init inotify
+2018/02/13 13:50:17    Add file to track
+2018/02/13 13:50:17    Watching:: /home/daneel/prog/osis/lab5/ss.txt
+2018/02/13 13:50:17    Set inotify O_NONBLOCK
+2018/02/13 13:50:17    Start track to file
+2018/02/13 13:50:19    Read configuration
+2018/02/13 13:50:19    Set signals
+2018/02/13 13:50:19    Start signal listen
+2018/02/13 13:51:39    Set new default file mask
+2018/02/13 13:51:39    Deatach from session
+2018/02/13 13:51:39    Reset PWS
+2018/02/13 13:51:39    Close IO descriptors
+2018/02/13 13:51:39    Start track to file
+2018/02/13 13:51:39    Create track thread
+2018/02/13 13:51:39    Start track thread
+2018/02/13 13:51:39    Start signal control
+2018/02/13 13:51:39    Init inotify
+2018/02/13 13:51:39    Add file to track
+2018/02/13 13:51:39    Watching:: /home/daneel/prog/osis/lab5/ss.txt
+2018/02/13 13:51:39    Set inotify O_NONBLOCK
+2018/02/13 13:51:39    Start track to file
+2018/02/13 13:51:41    Read configuration
+2018/02/13 13:51:41    Set signals
+2018/02/13 13:51:41    Start signal listen
+2018/02/13 13:51:45    GET SIGNAL 10 (USER1_SIGNAL)
+2018/02/13 13:52:36    Update configuration
+2018/02/13 13:52:36    Update signals
+2018/02/13 13:52:47    GET SIGNAL 15 (SHASDFHADS)
+2018/02/13 13:53:04    FILE WAS OPEND
+2018/02/13 13:53:04    FILE WAS CLOSED
+2018/02/13 13:53:04    FILE WAS OPEND
+2018/02/13 13:53:04    FILE WAS CLOSED
+2018/02/13 13:53:04    FILE WAS OPEND
+2018/02/13 13:53:04    FILE WAS CLOSED
+2018/02/13 13:53:04    FILE WAS OPEND
+2018/02/13 13:53:04    SOMEBODY ACCESS TO FILE
+2018/02/13 13:53:04    FILE WAS CLOSED
+2018/02/13 13:53:04    FILE WAS OPEND
+2018/02/13 13:53:04    FILE WAS CLOSED
+2018/02/13 13:56:45    Free configuration
+2018/02/13 13:56:45    Stop track thread
+2018/02/13 13:56:45    Stop watch to file
+2018/02/13 13:56:45    Exit from track thread
+2018/02/13 13:56:45    Sucsessfuly stop track thread
+2018/02/13 13:56:45    Exit from deamon

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+file=`readlink -f $0`
+output=${file}.doc
+{
+    echo -e "file: ${file}\n"
+    nl -ba -s": " $0
+    echo -e "\n@`whoami` `date -u`"
+} > $0.doc

@@ -1,0 +1,169 @@
+#!/bin/bash
+
+selx=0
+sely=0
+
+print_game(){
+    for ((i=0; i<3; i++))
+    do
+        echo "+-----+"
+        echo -n "|"
+        for ((ii=0; ii<3; ii++))
+        do
+            local index=$((i*3+ii))
+            local symb="${game[$index]}"
+            if [ -z "${symb}" ]
+            then
+                symb=" "
+            fi
+
+            if [ -n "${critical[$index]}" ]
+            then
+                echo -n -e "\E[31;40m$symb"
+                echo -n -e "\E[37;40m"
+            elif ((sely==i && selx==ii))
+            then
+                echo -n -e "\E[30;47m$symb"
+                echo -n -e "\E[37;40m"
+            else
+                echo -n "$symb"
+            fi
+
+            echo -n "|"
+        done
+        echo
+    done
+    echo "+-----+"
+}
+
+check(){
+    for ((i=0;i<3;i++))
+    do
+        if expr "${game[$((i*3))]}" : "${game[$((i*3+1))]}" \& \
+                "${game[$((i*3))]}" : "${game[$((i*3+2))]}" \& \
+                "${game[$((i*3))]}" >/dev/null
+        then
+            critical[$((i*3))]=0
+            critical[$((i*3+1))]=0
+            critical[$((i*3+2))]=0
+            return 1
+        fi
+    done
+
+    for ((i=0;i<3;i++))
+    do
+        if expr "${game[$((i))]}" : "${game[$((i+3))]}" \& \
+                "${game[$((i))]}" : "${game[$((i+6))]}" \& \
+                "${game[$((i))]}" >/dev/null
+        then
+            critical[$((i))]=0
+            critical[$((i+3))]=0
+            critical[$((i+6))]=0
+            return 1
+        fi
+    done
+
+    if expr "${game[0]}" : "${game[4]}" \& \
+            "${game[0]}" : "${game[8]}" \& \
+            "${game[0]}" >/dev/null
+    then
+            critical[0]=0
+            critical[4]=0
+            critical[8]=0
+            return 1
+    fi
+
+    if expr "${game[2]}" : "${game[4]}" \& \
+            "${game[2]}" : "${game[6]}" \& \
+            "${game[2]}" >/dev/null
+    then
+            critical[2]=0
+            critical[4]=0
+            critical[6]=0
+            return 1
+    fi
+
+    return 0
+}
+
+save(){
+    for ((i=0; i<3; i++))
+    do
+        echo "+-----+"
+        echo -n "|"
+        for ((ii=0; ii<3; ii++))
+        do
+            local index=$((i*3+ii))
+            local symb="${game[$index]}"
+            if [ -z "${symb}" ]
+            then
+                symb=" "
+            fi
+            echo -n "$symb"
+            echo -n "|"
+        done
+        echo
+    done
+    echo "+-----+"
+} >save.txt
+
+display(){
+    clear
+    echo "Используйте wasd для перемещения курсора"
+    echo "Используйте Enter чтобы подтвердить выбор"
+    echo "Используйте p тобы сделать снимок в save.txt"
+    echo
+    print_game
+    echo
+}
+
+turn(){
+    check
+    if [ "$?" -eq "1" ]
+    then
+        display
+        echo "Игрок $play победил!"
+        play=""
+    fi
+
+    if expr "$play" : "O" >/dev/null
+    then
+        play=X
+    elif expr "$play" : "X" >/dev/null
+    then
+        play=O
+    fi
+}
+
+play=O
+while [ -n "$play" ]
+do
+    display
+    read -n 1 -r -p "Поставьте $play"
+    case "$REPLY" in
+    "w" )
+        ((sely = sely ? sely-1 : 0))
+    ;;
+    "a" )
+        ((selx = selx ? selx-1 : 0))
+    ;;
+    "s" )
+        ((sely = sely==2 ? 2 : sely+1))
+    ;;
+    "d" )
+        ((selx = selx==2 ? 2 : selx+1))
+    ;;
+    "`echo -e '\n'`" )
+        index=$((sely*3+selx))
+        if [ -z "${game[$index]}" ]
+        then
+            game[$index]=$play
+            turn
+        fi
+    ;;
+    "p")
+        save
+    ;;
+    esac
+
+done

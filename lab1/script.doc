@@ -1,0 +1,13 @@
+file: /home/daneel/prog/osis/lab1/script
+
+     1: #!/bin/bash
+     2: 
+     3: file=`readlink -f $0`
+     4: output=${file}.doc
+     5: {
+     6:     echo -e "file: ${file}\n"
+     7:     nl -ba -s": " $0
+     8:     echo -e "\n@`whoami` `date -u`"
+     9: } > $0.doc
+
+@daneel Вт фев 13 10:29:49 UTC 2018
